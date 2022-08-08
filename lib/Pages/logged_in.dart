@@ -12,9 +12,9 @@ class LoggedIn extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome: ${FirebaseAuth.instance.currentUser!.providerData[0].displayName}",textScaleFactor: 1.3,),
+            Text("Welcome: ${FirebaseAuth.instance.currentUser!.displayName}",textScaleFactor: 1.3,),
             Text("Email: \n"
-                "${FirebaseAuth.instance.currentUser!.providerData[0].email}",textScaleFactor: 1.3,),
+                "${FirebaseAuth.instance.currentUser!.email}",textScaleFactor: 1.3,),
             ElevatedButton(
               onPressed: ()async{
                 var result = await GoogleSignInAuthClass().gSignOut();
