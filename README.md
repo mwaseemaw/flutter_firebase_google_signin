@@ -10,9 +10,11 @@ For Explanation of this implementation visit the following link below
 
 ### Use the following dependencies
 
-> google_sign_in: ^5.4.0
+```sh
+google_sign_in: ^5.4.0
 
-> firebase_core: ^1.20.0
+firebase_core: ^1.20.0
  
-> firebase_auth: ^3.6.2
+firebase_auth: ^3.6.2
+```
 ### Visit [my page](https://mwaseemaw.medium.com) for more blogs
