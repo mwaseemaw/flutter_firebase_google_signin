@@ -25,20 +25,20 @@ class LoginPage extends StatelessWidget {
               padding:  EdgeInsets.symmetric(vertical: 15),
               child: Text('OR'),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.asset('lib/Assets/google.jpg',height: 30,),
-                TextButton(
-                  onPressed: ()async{
-                    User? result = await GoogleSignInAuthClass().gSignIn();
-                    result != null ?
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>LoggedIn()), (route) => false)
-                        : print(result);
-                  },
-                  child: const Text('Sign in with google',textScaleFactor: 1.2,),
-                ),
-              ],
+            TextButton(
+              onPressed: ()async{
+                User? result = await GoogleSignInAuthClass().gSignIn();
+                result != null ?
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>LoggedIn()), (route) => false)
+                    : print(result);
+              },
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset('lib/Assets/google.jpg',height: 30,),
+                  const Text('Sign in with google',textScaleFactor: 1.2,),
+                ],
+              ),
             ),
           ],
         ),
